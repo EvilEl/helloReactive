@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Set HTML</title>
+  <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="dark">
+    <div class="containter">
+      <div id="content">
+        Счетчик: 0
+      </div>
+      <button id="increment">
+        Увеличить
+      </button>
+      <button id="reset">
+        Сбросить
+      </button>
+    </div>
+  </div>
+</body>
+<script>
+  const state = {
+    _value: 0,
+    get value() {
+      return this._value
+    },
+    set value(newValue) {
+      this._value = newValue
+      renderContent()
+    }
+  }
+
+  function renderContent() {
+    document.querySelector('#content').innerHTML = `Счетчик: ${state.value}`
+  }
+
+  function increment() {
+    state.value += 1
+  }
+
+  function reset() {
+    state.value = 0
+  }
+
+  document.querySelector('#increment').addEventListener('click', increment)
+  document.querySelector('#reset').addEventListener('click', reset)
+
+</script>
+
+</html>

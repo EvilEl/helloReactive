@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.dark {
+  background: darkblue;
+  height: 100vh;
+}
+
+.containter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#content {
+  color: #fff;
+  margin-top: 15rem;
+  margin-bottom: 1rem;
+}
